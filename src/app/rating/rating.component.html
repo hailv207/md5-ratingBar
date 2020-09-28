@@ -1,0 +1,6 @@
+<div>
+<input type="number" [(ngModel)]="ratingValue">
+    <span *ngFor="let item of ratingUnits ;index as i" [class.active]="item.active" (click)="doRating(i)"
+          (mouseenter)="showHighlight(i)" (mouseleave)="resetHighlight()" [textContent]="i + 1">
+    </span>
+</div>
