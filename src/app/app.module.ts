@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RatingComponent } from './rating/rating.component';
 import {FormsModule} from '@angular/forms';
+import { CountdownComponent } from './countdown/countdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RatingComponent
+    RatingComponent,
+    CountdownComponent
   ],
     imports: [
         BrowserModule,

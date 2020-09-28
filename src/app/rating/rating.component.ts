@@ -1,4 +1,4 @@
-import {Input} from '@angular/core';
+import {EventEmitter, Input, Output} from '@angular/core';
 import {Component, OnInit} from '@angular/core';
 import {IRating} from '../irating';
 
@@ -15,6 +15,11 @@ export class RatingComponent implements OnInit {
 
   @Input()
   ratingValue = 5;
+
+  @Output()
+  test =new EventEmitter<number>();
+
+
 
   @Input()
   showRatingValue = true;
@@ -44,6 +49,7 @@ export class RatingComponent implements OnInit {
 
   doRating(rating: number) {
     this.ratingValue = rating + 1;
+    this.test.emit(rating);
   }
 
   constructor() {
